@@ -1,0 +1,44 @@
+api-version: '1.13'
+author: Epicnicity322
+depend: [ EpicPluginLib, PlaceholderAPI ]
+description: A bukkit plugin for managing player tags.
+main: com.epicnicity322.epictags.EpicTags
+name: '${project.name}'
+version: '${project.version}'
+
+commands:
+  epictags:
+    aliases: [ tags ]
+    description: Opens the Tag Settings GUI of a player.
+    permission: epictags.edit
+    usage: '/epictags [player]'
+
+  epictagsreload:
+    aliases: [ tagsreload ]
+    description: Reloads EpicTags plugin and loads the new tags in configuration.
+    permission: epictags.reload
+
+permissions:
+  epictags.reload:
+    default: op
+    description: Allows players to use the reload command of EpicTags.
+
+  epictags.edit:
+    default: op
+    description: Allows players to open the Tag Settings GUI.
+
+  epictags.edit.others:
+    default: op
+    description: Allows players to open the Tag Settings GUI of other players and edit their tags.
+
+  epictags.edit.group:
+    default: op
+    description: Allows players to edit a tag's group through the Tag Settings GUI.
+
+  epictags.edit.priority:
+    default: op
+    description: Allows players to edit a tag's priority through the Tag Settings GUI.
+
+  epictags.edit.visibility:
+    default: op
+    description: Allows players to set a tag's visibility through the Tag Settings GUI.
